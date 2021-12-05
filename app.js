@@ -29,7 +29,7 @@ let calculatePL = () => {
             profitMsg.style.display = 'block';
             profitMsg.innerText = `You had a net profit of ${netPL} amounting to ${Math.round(perPL)}% profit!`;
             mainEl.style.boxShadow = '0 -12px 15px #61E786';
-            footerEl.style.boxShadow = '0 1px 15px #61E786';
+            footerEl.style.boxShadow = '0 0.5px 15px #61E786';
         }else if(netPL<0){
             netPL = netPL * (-1);
             perPL = ((cP - sP)/cP) * 100;
@@ -38,14 +38,14 @@ let calculatePL = () => {
             lossMsg.style.display = 'block';
             lossMsg.innerText = `You had a net loss of ${netPL} amounting to ${Math.round(perPL)}% loss!`;
             mainEl.style.boxShadow = '0 -12px 15px rgb(245, 23, 103)';
-            footerEl.style.boxShadow = '0 1px 15px rgb(245, 23, 103)';
+            footerEl.style.boxShadow = '0 0.5px 15px rgb(245, 23, 103)';
         }else{
             neutralMsg.style.display = 'block';
             profitMsg.style.display = 'none';
             lossMsg.style.display = 'none';
             neutralMsg.innerText = 'NO PAIN NO GAIN';
-            mainEl.style.boxShadow = '0 -12px 15px rgb(245, 23, 103)';
-            footerEl.style.boxShadow = '0 1px 15px rgb(245, 23, 103)';
+            mainEl.style.boxShadow = '0 -12px 15px  #ced4da';
+            footerEl.style.boxShadow = '0 0.5px 15px  #ced4da';
         }
     }else{
         neutralMsg.style.display = 'block';
